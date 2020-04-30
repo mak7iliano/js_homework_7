@@ -40,10 +40,7 @@ class Circle {
 class Marker{
     constructor(_color, _quantity){
         this.color = _color;
-        this.quantity = _quantity;
-        if(this.quantity > 100){
-            this.quantity = 100;
-        }
+        this.quantity = _quantity > 100 ? 100 : _quantity;
     }
 
     print(text){
